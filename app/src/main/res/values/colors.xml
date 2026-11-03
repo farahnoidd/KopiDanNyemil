@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="kn_bg">#FFFBF7</color>
+    <color name="kn_peach">#F6D3B1</color>
+    <color name="kn_peach_light">#FFF1E6</color>
+    <color name="kn_peach_stroke">#F2D9C3</color>
+    <color name="kn_brown">#A0541C</color>
+    <color name="kn_dark">#1A1A1A</color>
+    <color name="kn_gray">#6B6B6B</color>
+    <color name="kn_border">#D9D9D9</color>
+    <color name="kn_green">#B8F0C8</color>
+    <color name="kn_green_text">#1B7F3A</color>
+</resources>

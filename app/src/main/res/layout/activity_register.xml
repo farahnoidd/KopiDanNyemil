@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kn_bg"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Register"
+        android:textColor="@color/kn_dark"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input"
+        android:hint="nama lengkap"
+        android:inputType="textPersonName"
+        android:minHeight="52dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/kn_dark"
+        android:textColorHint="@color/kn_gray" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:hint="username"
+        android:inputType="text"
+        android:minHeight="52dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/kn_dark"
+        android:textColorHint="@color/kn_gray" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:hint="password (minimal 5 karakter)"
+        android:inputType="textPassword"
+        android:minHeight="52dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/kn_dark"
+        android:textColorHint="@color/kn_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/kn_dark"
+        app:cornerRadius="14dp" />
+
+</LinearLayout>
