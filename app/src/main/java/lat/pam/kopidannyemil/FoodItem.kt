@@ -1,12 +1,18 @@
 package lat.pam.kopidannyemil
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "foods")
 data class FoodItem(
     val name: String,
     val description: String,
     val price: Int,
-    val emoji: String
+    val emoji: String,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0
 )
 
+// Data awal (dimasukkan ke database saat pertama kali dibuka)
 object DummyData {
     val foods = listOf(
         FoodItem("Kopi Susu Gula Aren", "Espresso, susu, gula aren", 22000, "☕"),
