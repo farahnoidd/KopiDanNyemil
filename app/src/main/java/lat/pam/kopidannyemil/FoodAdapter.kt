@@ -7,8 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class FoodAdapter(
-    private val items: List<FoodItem>,
-    private val onItemClick: (FoodItem) -> Unit
+    private var items: List<FoodItem>,
+    private val onItemClick: (FoodItem) -> Unit,
+    private val onItemLongClick: (FoodItem) -> Unit
 ) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
     class FoodViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -16,6 +17,11 @@ class FoodAdapter(
         val tvName: TextView = view.findViewById(R.id.tv_name)
         val tvDesc: TextView = view.findViewById(R.id.tv_desc)
         val tvPrice: TextView = view.findViewById(R.id.tv_price)
+    }
+
+    fun setData(newItems: List<FoodItem>) {
+        items = newItems
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
@@ -31,6 +37,10 @@ class FoodAdapter(
         holder.tvDesc.text = item.description
         holder.tvPrice.text = rupiah(item.price)
         holder.itemView.setOnClickListener { onItemClick(item) }
+        holder.itemView.setOnLongClickListener {
+            onItemLongClick(item)
+            true
+        }
     }
 
     override fun getItemCount(): Int = items.size

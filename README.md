@@ -42,3 +42,13 @@ Splash → Sign up → Login / Register → Home ⇄ Profile → Alamat (Order) 
 
 ## Pembuat
 Farah Annafia, Teknik Informatika, UIN Sunan Gunung Djati Bandung
+
+## Materi 7: ViewModel, LiveData, dan Room
+Katalog makanan sekarang disimpan di database lokal SQLite menggunakan **Room**.
+- **Entity**: `FoodItem` (tabel `foods`)
+- **DAO**: `FoodDao` (insert, update, delete, query)
+- **Database**: `AppDatabase`
+- **Repository**: `FoodRepository`
+- **ViewModel + LiveData**: `FoodViewModel`, daftar menu di Home diamati lewat `observe`
+- Fitur baru: tambah menu, edit menu (tekan lama), hapus menu (tekan lama)
+- Data tetap tersimpan walaupun aplikasi ditutup
